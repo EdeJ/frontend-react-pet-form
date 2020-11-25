@@ -1,8 +1,8 @@
 import React from 'react';
 
-export const Input = ({ name, type, fieldRef, errors }) => {
+export const Input = ({ name, type, fieldRef }) => {
 
-    console.log(errors);
+    // console.log(errors);
     return (
         <input
             type={type}
