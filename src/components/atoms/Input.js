@@ -1,18 +1,15 @@
 import React from 'react';
 
-function Input({ name, fieldRef, errors }) {
+export const Input = ({ name, type, fieldRef, errors }) => {
 
     console.log(errors);
     return (
-        <>
-            <input
-                id={name}
-                name={name}
-                ref={fieldRef}
-            />
-            {errors[name] && <p>This {errors[name].message} </p>}
-        </>
+        <input
+            type={type}
+            id={name}
+            name={name}
+            ref={fieldRef}
+        />
     )
 }
 
-export default Input
