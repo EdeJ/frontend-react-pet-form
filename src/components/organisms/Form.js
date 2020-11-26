@@ -92,31 +92,31 @@ export const Form = () => {
             <input type="radio" id="cat" name="pet" value="cat" ref={register({
                 required: {
                     value: true,
-                    message: "TEST"
+                    message: "Er is niets geselcteerd."
                 }
             })} />
             <label htmlFor="pet">Hond</label>
             <input type="radio" id="dog" name="pet" value="dog" ref={register({
                 required: {
                     value: true,
-                    message: "TEST"
+                    message: "Er is niets geselcteerd."
                 }
             })} />
             <label htmlFor="hamster">Hamster</label>
             <input type="radio" id="hamster" name="pet" value="hamster" ref={register({
                 required: {
                     value: true,
-                    message: "TEST"
+                    message: "Er is niets geselcteerd."
                 }
             })} />
             <label htmlFor="other">Anders</label>
             <input type="radio" id="other" name="pet" value="other" ref={register({
                 required: {
                     value: true,
-                    message: "TEST"
+                    message: "Er is niets geselcteerd."
                 }
             })} />
-            { errors['pet'] && errors['pet'].message}
+            { errors.pet && errors.pet.message}
 
 
             <input type="submit" />
