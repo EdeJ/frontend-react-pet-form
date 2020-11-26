@@ -5,7 +5,7 @@ import { TextInput } from '../molecules/TextInput';
 
 export const Form = () => {
 
-    const { register, handleSubmit, watch, errors } = useForm();
+    const { register, handleSubmit, errors } = useForm();
 
     const onSubmit = () => {
         console.log('FORM SUBMITTED');
@@ -88,16 +88,14 @@ export const Form = () => {
             />
 
             <p>Selecteer je favoriete huisdier:</p>
-            <fieldset name="pet" ref={register({ required: true })}>
-                <label htmlFor="pet">Kat</label>
-                <input type="radio" id="cat" name="pet" value="cat" ref={register({ required: true })} />
-                <label htmlFor="pet">Hond</label>
-                <input type="radio" id="dog" name="pet" value="dog" ref={register({ required: true })} />
-                <label htmlFor="hamster">Hamster</label>
-                <input type="radio" id="hamster" name="pet" value="hamster" ref={register({ required: true })} />
-                <label htmlFor="other">Anders</label>
-                <input type="radio" id="other" name="pet" value="other" ref={register({ required: true })} />
-            </fieldset>
+            <label htmlFor="pet">Kat</label>
+            <input type="radio" id="cat" name="pet" value="cat" ref={register({ required: true })} />
+            <label htmlFor="pet">Hond</label>
+            <input type="radio" id="dog" name="pet" value="dog" ref={register({ required: true })} />
+            <label htmlFor="hamster">Hamster</label>
+            <input type="radio" id="hamster" name="pet" value="hamster" ref={register({ required: true })} />
+            <label htmlFor="other">Anders</label>
+            <input type="radio" id="other" name="pet" value="other" ref={register({ required: true })} />
 
             <input type="submit" />
         </form>
