@@ -3,15 +3,20 @@
     padding: 0;
 }
 
+:root {
+    --background-color: #EEE9DB;
+    --font-color: #635748;
+  }
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #EEE9DB;
+    background-color: var(--background-color);
 }
 
 .container {
-    color: #635748;
+    color: var(--font-color);
     width: 500px;
     padding: 40px;
 }
