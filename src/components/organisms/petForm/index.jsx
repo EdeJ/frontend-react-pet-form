@@ -1,11 +1,12 @@
 import React from 'react'
-import { FormProvider, useForm } from 'react-hook-form';
-import { Button } from '../atoms';
-import { NumberInput, RadioGroup, RadioInput, TextArea, TextInput } from '../molecules';
+import { FormProvider, useForm } from 'react-hook-form'
+import { Button } from '../../atoms'
+import { CheckBox, NumberInput, RadioGroup, RadioInput, TextArea, TextInput } from '../../molecules'
+import './formStyles.css'
 
 
 
-export const Form = () => {
+export const PetForm = () => {
 
     const { ...methods } = useForm();
 
@@ -117,8 +118,17 @@ export const Form = () => {
                     ) : methods.unregister('other-pet')}
                 </RadioGroup>
                 <TextArea label="Opmerking" name="comment" fieldRef={methods.register} />
-
-                <Button />
+                <CheckBox
+                    name="conditions"
+                    label="Ik ga akkoord met de voorwaarden"
+                    fieldRef={methods.register({
+                        required: {
+                            value: true,
+                            message: "Je dient akkoord te gaan met de voorwaarden"
+                        }
+                    })}
+                />
+                <Button>Verzenden</Button>
             </form>
         </FormProvider>
     )

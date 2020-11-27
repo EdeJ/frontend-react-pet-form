@@ -3,7 +3,7 @@ import { useFormContext } from 'react-hook-form';
 import { ErrorMessage, Input, Label } from '../../atoms';
 
 
-export const Checkbox = ({ label, name, fieldRef, value }) => {
+export const CheckBox = ({ label, name, fieldRef, value }) => {
     const { errors } = useFormContext();
 
     return (

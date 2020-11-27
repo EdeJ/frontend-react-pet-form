@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEE9DB;
+}
+
+.container {
+    color: #635748;
+    width: 500px;
+    padding: 40px;
+}

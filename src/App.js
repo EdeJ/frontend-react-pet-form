@@ -1,5 +1,5 @@
 import './App.css';
-import { Form } from './components/organisms/Form';
+import { PetForm } from './components/organisms/petForm';
 
 function App() {
 
@@ -9,7 +9,9 @@ function App() {
 
 
   return (
-    <Form />
+    <div className="container">
+      <PetForm />
+    </div>
   )
 }
 

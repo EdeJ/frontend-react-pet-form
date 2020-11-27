@@ -1,0 +1,44 @@
+.input-section {
+    margin-top: 1.6rem;
+}
+
+input {
+    display: block;
+    width: 100%;
+    line-height: 1.8rem;
+    padding: 0, 8rem;
+    border: 1px solid #635748;
+    border-radius: 4px;
+}
+
+input:focus {
+    border-color: #69BA5E;
+}
+
+.error {
+    border-color: #e50000;
+    background-color: #ffe5e5;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+button {
+    margin-top: 1.6rem;
+    background-color: #69BA5E;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 6.4rem;
+    font-size: inherit;
+    font-weight: 700;
+    line-height: 2.6rem;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    width: 100%;
+}

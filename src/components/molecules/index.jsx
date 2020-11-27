@@ -1,3 +1,4 @@
+import { CheckBox } from "./checkBox"
 import { NumberInput } from "./numberInput"
 import { RadioGroup } from "./radioGroup"
 import { RadioInput } from "./radioInput"
@@ -10,5 +11,5 @@ export {
     RadioGroup,
     RadioInput,
     TextArea,
-
+    CheckBox
 }
