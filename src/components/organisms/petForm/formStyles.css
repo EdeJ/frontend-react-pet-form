@@ -11,7 +11,7 @@
     margin-top: 1.6rem;
 }
 
-input {
+input[type=text] {
     display: block;
     width: 100%;
     line-height: 2.8rem;
@@ -19,8 +19,13 @@ input {
     border-radius: 4px;
     padding: 0 .8rem;
 }
+/* input[type=radio] {
+    width: inherit;
+    display: inline;
+    float: left;
+} */
 
-input:focus {
+input[type=text]:focus {
     border-color: var(--custom-green);
 }
 
@@ -55,3 +60,17 @@ button {
 button:hover{
     background-color: var(--custom-dark-green);
 }
+
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+}
+.radio-group label {
+    margin-left: 10px;
+    flex-wrap: wrap;
+}
+/* .flex-input-section {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+} */
