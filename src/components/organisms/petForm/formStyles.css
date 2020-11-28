@@ -1,6 +1,6 @@
 :root {
     --custom-red: #CB2431;
-    --custom-beige: #ffe5e5;
+    --custom-light-red: #ffefef;
     --custom-green:  #69BA5E;
     --custom-dark-green: #58a34d;
     --custom-brown: #635748;
@@ -11,7 +11,7 @@
     margin-top: 1.6rem;
 }
 
-input[type=text] {
+input[type=text], input[type=number], textarea {
     display: block;
     width: 100%;
     line-height: 2.8rem;
@@ -19,19 +19,23 @@ input[type=text] {
     border-radius: 4px;
     padding: 0 .8rem;
 }
-/* input[type=radio] {
-    width: inherit;
-    display: inline;
-    float: left;
-} */
 
-input[type=text]:focus {
+
+input[type=text]:focus, textarea:focus {
     border-color: var(--custom-green);
 }
 
 .error {
     border-color: var(--custom-red);
-    background-color: var(--custom-beige);
+    background-color: var(--custom-light-red);
+}
+
+input.error {
+    border-color: var(--custom-red);
+}
+
+.error-message {
+    color: var(--custom-red);
 }
 
 label {
@@ -61,16 +65,20 @@ button:hover{
     background-color: var(--custom-dark-green);
 }
 
+
 .radio-group {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
 }
-.radio-group label {
-    margin-left: 10px;
+.radio-set {
     flex-wrap: wrap;
+    margin-right: 10px;
+    display: inline;
 }
-/* .flex-input-section {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-} */
+.radio-set label {
+    margin-left:10px;
+}
+.checkbox label{
+    margin-left: 10px;
+}

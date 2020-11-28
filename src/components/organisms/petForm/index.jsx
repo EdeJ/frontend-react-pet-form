@@ -14,7 +14,7 @@ export const PetForm = () => {
         { value: 'cat', label: 'Kat' },
         { value: 'dog', label: 'Hond' },
         { value: 'hamster', label: 'Hamster' },
-        { value: 'mouse', label: 'Mouse' },
+        { value: 'mouse', label: 'Muis' },
         { value: 'other', label: 'Anders' }
     ]
 
@@ -34,6 +34,7 @@ export const PetForm = () => {
                 <TextInput
                     label="Voornaam"
                     name="name"
+                    required={true}
                     fieldRef={methods.register({
                         required: {
                             value: true,
@@ -44,6 +45,7 @@ export const PetForm = () => {
                 <TextInput
                     label="Achternaam"
                     name="lastName"
+                    required={true}
                     fieldRef={methods.register({
                         required: {
                             value: true,
@@ -54,6 +56,7 @@ export const PetForm = () => {
                 <NumberInput
                     label="Leeftijd"
                     name="age"
+                    required={true}
                     fieldRef={methods.register({
                         required: {
                             value: true,
@@ -68,6 +71,7 @@ export const PetForm = () => {
                 <TextInput
                     label="Postcode"
                     name="zipCode"
+                    required={true}
                     fieldRef={methods.register({
                         required: {
                             value: true,
@@ -82,6 +86,7 @@ export const PetForm = () => {
                 <TextInput
                     label="Huisnummer"
                     name="houseNumber"
+                    required={true}
                     fieldRef={methods.register({
                         required: {
                             value: true,
@@ -94,7 +99,11 @@ export const PetForm = () => {
                     })}
                 />
 
-                <RadioGroup name="pet" errors={methods.errors} label="Selecteer je favoriete huisdier:">
+                <RadioGroup name="pet"
+                    // errors={methods.errors}
+                    label="Selecteer je favoriete huisdier:"
+                    required={true}
+                >
                     {pets.map(pet => (
                         <RadioInput
                             key={pet.value}
@@ -107,6 +116,7 @@ export const PetForm = () => {
                     {currentPet === 'other' ? (
                         <TextInput
                             label="Ander huisdier"
+                            required={true}
                             fieldRef={methods.register({
                                 required: {
                                     value: true,
@@ -121,6 +131,7 @@ export const PetForm = () => {
                 <CheckBox
                     name="conditions"
                     label="Ik ga akkoord met de voorwaarden"
+                    required={true}
                     fieldRef={methods.register({
                         required: {
                             value: true,

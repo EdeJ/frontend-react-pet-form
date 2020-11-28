@@ -1,10 +1,14 @@
 import React from 'react'
+import { useFormContext } from 'react-hook-form';
 import { ErrorMessage, Label } from '../../atoms'
 
-export const RadioGroup = ({ children, label, name, errors }) => {
+export const RadioGroup = ({ children, label, name, required }) => {
+
+    const { errors } = useFormContext();
+
     return (
         <div className="input-section">
-            <Label>{label}</Label>
+            <Label required={required}>{label}</Label>
             <div className="radio-group">
                 {children}
             </div>
