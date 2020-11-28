@@ -32,9 +32,8 @@ export const PetForm = () => {
         <FormProvider {...methods} >
             <form onSubmit={methods.handleSubmit(onSuccess, onError)}>
                 <TextInput
-                    label="Voornaam"
+                    label="Voornaam *"
                     name="name"
-                    required={true}
                     fieldRef={methods.register({
                         required: {
                             value: true,
@@ -43,9 +42,8 @@ export const PetForm = () => {
                     })}
                 />
                 <TextInput
-                    label="Achternaam"
+                    label="Achternaam *"
                     name="lastName"
-                    required={true}
                     fieldRef={methods.register({
                         required: {
                             value: true,
@@ -54,9 +52,8 @@ export const PetForm = () => {
                     })}
                 />
                 <NumberInput
-                    label="Leeftijd"
+                    label="Leeftijd *"
                     name="age"
-                    required={true}
                     fieldRef={methods.register({
                         required: {
                             value: true,
@@ -69,9 +66,8 @@ export const PetForm = () => {
                     })}
                 />
                 <TextInput
-                    label="Postcode"
+                    label="Postcode *"
                     name="zipCode"
-                    required={true}
                     fieldRef={methods.register({
                         required: {
                             value: true,
@@ -84,9 +80,8 @@ export const PetForm = () => {
                     })}
                 />
                 <TextInput
-                    label="Huisnummer"
+                    label="Huisnummer *"
                     name="houseNumber"
-                    required={true}
                     fieldRef={methods.register({
                         required: {
                             value: true,
@@ -100,9 +95,7 @@ export const PetForm = () => {
                 />
 
                 <RadioGroup name="pet"
-                    // errors={methods.errors}
-                    label="Selecteer je favoriete huisdier:"
-                    required={true}
+                    label="Selecteer je favoriete huisdier: *"
                 >
                     {pets.map(pet => (
                         <RadioInput
@@ -115,8 +108,8 @@ export const PetForm = () => {
                     ))}
                     {currentPet === 'other' ? (
                         <TextInput
-                            label="Ander huisdier"
-                            required={true}
+                            label="Ander huisdier *"
+
                             fieldRef={methods.register({
                                 required: {
                                     value: true,
@@ -130,12 +123,12 @@ export const PetForm = () => {
                 <TextArea label="Opmerking" name="comment" fieldRef={methods.register} />
                 <CheckBox
                     name="conditions"
-                    label="Ik ga akkoord met de voorwaarden"
-                    required={true}
+                    label="Ik ga akkoord met de voorwaarden *"
+
                     fieldRef={methods.register({
                         required: {
                             value: true,
-                            message: "Je dient akkoord te gaan met de voorwaarden"
+                            message: "Je dient akkoord te gaan met de voorwaarden."
                         }
                     })}
                 />

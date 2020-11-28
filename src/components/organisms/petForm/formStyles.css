@@ -1,11 +1,19 @@
 :root {
+    --custom-background: #EEE9DB;
     --custom-red: #CB2431;
     --custom-light-red: #ffefef;
     --custom-green:  #69BA5E;
     --custom-dark-green: #58a34d;
     --custom-brown: #635748;
+    --custem-border-beige: #d0b899;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
 
 .input-section {
     margin-top: 1.6rem;
@@ -15,19 +23,22 @@ input[type=text], input[type=number], textarea {
     display: block;
     width: 100%;
     line-height: 2.8rem;
-    border: 1px solid var(--custom-brown);
+    border: 1px solid var(--custem-border-beige);
     border-radius: 4px;
     padding: 0 .8rem;
 }
 
+input:hover, textarea:hover {
+    border-color: var(--custom-brown);
+}
 
-input[type=text]:focus, textarea:focus {
+input:focus, textarea:focus {
     border-color: var(--custom-green);
 }
 
 .error {
     border-color: var(--custom-red);
-    background-color: var(--custom-light-red);
+    /* background-color: var(--custom-light-red); */
 }
 
 input.error {
@@ -70,11 +81,11 @@ button:hover{
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    flex-wrap: wrap;
 }
 .radio-set {
-    flex-wrap: wrap;
     margin-right: 10px;
-    display: inline;
+    margin-bottom: 5px;
 }
 .radio-set label {
     margin-left:10px;
